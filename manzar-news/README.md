@@ -2,6 +2,10 @@
 
 A native WordPress block theme for an Urdu newspaper. Requires WordPress 6.7+ and PHP 8.0+. No page builder or frontend JavaScript dependency. Theme code is GPL-2.0-or-later.
 
+## Update from 1.0.0
+
+Version 1.0.1 fixes PHP “Undefined array key slug” warnings and registers the supplied font directly in theme.json. Upload the new ZIP in Appearance → Themes → Add New → Upload Theme, then choose Replace current with uploaded. Clear any page cache and refresh. Set Settings → General → Site Language to اردو for native RTL layout, and set Site Title to منظر نیوز. The theme does not automatically replace your existing posts; import the optional demo XML below to populate the news sections.
+
 ## Install
 
 Upload **manzar-news.zip** in **Appearance → Themes → Add New → Upload Theme**, install and activate. The ZIP contains one `manzar-news/` directory. Set **Settings → General → Site Language** to **اردو**, the site title to **منظر نیوز**, tagline to **ہر خبر، ہر منظر**, and the appropriate timezone. WordPress then supplies RTL direction and translated dates; the theme does not force Urdu on an English admin/site.

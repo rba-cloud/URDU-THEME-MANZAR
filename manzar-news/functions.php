@@ -16,20 +16,6 @@ function manzar_news_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'manzar_news_assets' );
 
-/** Register the supplied font only when the real file is present. No failed asset requests. */
-function manzar_news_font_settings( $data ) {
-	$font = '/assets/fonts/jameel-noori-nastaleeq.ttf';
-	if ( is_readable( get_template_directory() . $font ) ) {
-		$data['settings']['typography']['fontFamilies'][0]['fontFace'] = array(
-			array( 'fontFamily' => 'Jameel Noori Nastaleeq', 'fontStyle' => 'normal', 'fontWeight' => '400', 'fontDisplay' => 'swap', 'src' => array( 'file:.' . $font ) ),
-		);
-	}
-	return $data;
-}
-add_filter( 'wp_theme_json_data_theme', function ( $theme_json ) {
-	return $theme_json->update_with( manzar_news_font_settings( $theme_json->get_data() ) );
-} );
-
 function manzar_news_register() {
 	register_block_pattern_category( 'manzar-news', array( 'label' => __( 'Manzar News — newspaper', 'manzar-news' ) ) );
 	register_block_type( 'manzar-news/current-date', array(

@@ -74,7 +74,18 @@
         {
           "name": "Urdu newspaper",
           "slug": "urdu",
-          "fontFamily": "\"Jameel Noori Nastaleeq\", \"Noto Nastaliq Urdu\", \"Urdu Typesetting\", serif"
+          "fontFamily": "\"Jameel Noori Nastaleeq\", \"Noto Nastaliq Urdu\", \"Urdu Typesetting\", serif",
+          "fontFace": [
+            {
+              "fontFamily": "Jameel Noori Nastaleeq",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/jameel-noori-nastaleeq.ttf"
+              ]
+            }
+          ]
         },
         {
           "name": "System sans",

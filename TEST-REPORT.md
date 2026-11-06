@@ -45,12 +45,16 @@ The final `manzar-news.zip` was uploaded through the native WordPress dashboard 
 
 ## Archive
 
-`manzar-news.zip`: 36 files, 9,066,377 bytes, rebuilt with the supplied TTF.
+`manzar-news.zip` version 1.0.1: 36 files, 9,066,390 bytes.
 
-SHA-256: `59f9334a726d3605a1eac57558b3cc72a743f6783f678a9e61133bdedef1a305`
+SHA-256: `af1ccc883dd1f13454627705e69ced2cd94696ced433ba7cfe4948549eebc88f`
 
 See `manzar-news/README.md` for installation, customization, category filters, advertisements, font integration, optional demo imports and ZIP export instructions.
 
 ## Supplied-font follow-up
 
 The uploaded TTF was verified as Jameel Noori Nastaleeq, included byte-for-byte unchanged, and loaded successfully in a local Chromium font specimen at 390px and 1440px. The specimen showed no horizontal overflow. This follow-up is distinct from the earlier full WordPress validation. The regenerated archive passed CRC validation and contains the exact supplied font.
+
+## Version 1.0.1 font-registration regression
+
+Removed the PHP filter that indexed normalized fontFamilies as a flat list, causing missing-slug warnings after the supplied font was added. Registered the bundled font directly in the source theme.json font family instead. Verified in WordPress 6.9/PHP 8.3 with WP_DEBUG enabled: no PHP warning output, successful HTTP 200 font request, actual Jameel Noori Nastaleeq face loaded, no browser JavaScript errors, and no horizontal overflow at 390px and 1440px. Rebuilt archive passes CRC and byte-for-byte source matching.

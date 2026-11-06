@@ -1,0 +1,29 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /--><!-- wp:group {"tagName":"main","layout":{"type":"default"},"className":"manzar-single"} -->
+<main class="wp-block-group manzar-single"><!-- wp:group {"tagName":"div","layout":{"type":"default"},"className":"manzar-content-with-sidebar"} -->
+<div class="wp-block-group manzar-content-with-sidebar"><!-- wp:template-part {"slug":"sidebar","tagName":"aside"} /--><!-- wp:group {"tagName":"article","layout":{"type":"default"},"className":"manzar-article"} -->
+<article class="wp-block-group manzar-article"><!-- wp:post-terms {"term":"category"} /--><!-- wp:post-title {"level":1} /--><!-- wp:group {"tagName":"div","layout":{"type":"flex","flexWrap":"wrap"},"className":"manzar-byline"} -->
+<div class="wp-block-group manzar-byline"><!-- wp:post-author-name {"isLink":true} /--><!-- wp:post-date {"format":"j F Y"} /--><!-- wp:post-date {"displayType":"modified","format":"j F Y","className":"manzar-updated","metadata":{"name":"آخری تازہ کاری"}} /--></div>
+<!-- /wp:group --><!-- wp:post-featured-image {"aspectRatio":"16/9","sizeSlug":"full"} /--><!-- wp:post-content {"layout":{"type":"constrained"}} /--><!-- wp:group {"tagName":"div","layout":{"type":"default"},"className":"manzar-ad manzar-article-ad"} -->
+<div class="wp-block-group manzar-ad manzar-article-ad"><!-- wp:paragraph {"className":"manzar-ad-label"} -->
+<p class="manzar-ad-label">اشتہار</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"manzar-ad-note"} -->
+<p class="manzar-ad-note">اپنا اشتہار یہاں شامل کریں</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:post-terms {"term":"post_tag"} /--><!-- wp:manzar-news/share-links /--><!-- wp:group {"tagName":"div","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"},"className":"manzar-post-navigation"} -->
+<div class="wp-block-group manzar-post-navigation"><!-- wp:post-navigation-link {"type":"previous","label":"پچھلی خبر: ","showTitle":true} /--><!-- wp:post-navigation-link {"type":"next","label":"اگلی خبر: ","showTitle":true} /--></div>
+<!-- /wp:group --><!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">متعلقہ خبریں</h2>
+<!-- /wp:heading --><!-- wp:query {"queryId":30,"query":{"manzarRelated":true,"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"className":"manzar-news-grid manzar-related"} -->
+<div class="wp-block-query manzar-news-grid manzar-related"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/10","sizeSlug":"large"} /--><!-- wp:group {"tagName":"div","layout":{"type":"default"},"className":"manzar-card-copy"} -->
+<div class="wp-block-group manzar-card-copy"><!-- wp:post-terms {"term":"category"} /--><!-- wp:post-title {"isLink":true,"level":3} /--><!-- wp:post-date {"format":"j F Y"} /--><!-- wp:post-excerpt {"moreText":"مزید پڑھیں","excerptLength":22} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --><!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>اس حصے میں ابھی کوئی خبر شائع نہیں ہوئی۔</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></article>
+<!-- /wp:group --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group --><!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

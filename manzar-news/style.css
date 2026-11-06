@@ -1,0 +1,133 @@
+/*
+Theme Name: Manzar News
+Theme URI: https://github.com/rba-cloud/URDU-THEME-MANZAR
+Author: Manzar News
+Description: An editable Urdu newspaper block theme with native news queries, RTL editorial layouts, and restrained red accents.
+Version: 1.0.0
+Requires at least: 6.7
+Tested up to: 6.9
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: manzar-news
+Tags: news, block-patterns, full-site-editing, rtl-language-support, custom-colors, custom-logo, editor-style, featured-images, wide-blocks
+*/
+/* The font face is registered through WordPress only when the supplied WOFF2 exists. */
+:root { --manzar-red: var(--wp--preset--color--red, #b91c1c); --manzar-line: var(--wp--preset--color--line, #e5e5e5); }
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; overflow-wrap: break-word; }
+.wp-site-blocks { padding-top: 0; padding-bottom: 0; }
+.wp-site-blocks > * { margin-block-start: 0; }
+img { max-width: 100%; height: auto; }
+a, button, input { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--manzar-red); outline-offset: 4px; }
+:where(main, article, aside, .wp-block-query, .wp-block-group, .wp-block-post) { min-width: 0; }
+:where(h1,h2,h3,p) { overflow-wrap: anywhere; }
+:where(h1,h2,h3) a { text-decoration: none; }
+.manzar-header, .manzar-footer, main.manzar-front, main.manzar-archive, main.manzar-single, main.manzar-page, main.manzar-not-found { width: calc(100% - 2 * clamp(16px, 3vw, 40px)); max-width: 1280px; margin-inline: auto; }
+.manzar-topbar { border-bottom: 1px solid var(--manzar-line); padding-block: 8px; gap: 12px 24px; font-size: .9rem; color: var(--wp--preset--color--muted); }
+.manzar-topbar p { margin: 0; }
+.manzar-topbar .wp-block-search { width: min(100%, 260px); }
+.wp-block-search__input { min-width: 0; border: 1px solid var(--manzar-line); border-radius: 0; background: var(--wp--preset--color--paper); color: inherit; font: inherit; padding: 4px 12px; }
+.wp-block-search__button { margin-inline-start: 0; padding: 8px 12px; min-height: 44px; border: 0; }
+.manzar-masthead { padding-block: 22px; gap: 24px; }
+.manzar-brand { text-align: center; min-width: 230px; }
+.manzar-brand > * { margin-block: 0; }
+.manzar-brand .wp-block-site-title { font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 2; letter-spacing: -.04em; }
+.manzar-tagline { color: var(--wp--preset--color--muted); font-size: .95rem; }
+.manzar-ad { background: var(--wp--preset--color--light); border: 1px dashed #b5b5b5; text-align: center; padding: 18px; min-height: 105px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+.manzar-ad p { margin: 0; color: var(--wp--preset--color--muted); }
+.manzar-ad-label { font-size: 1rem; }
+.manzar-ad-note { font-size: .8rem; }
+.manzar-header-ad { flex: 0 1 620px; }
+.manzar-nav { border-top: 3px solid var(--manzar-red); border-bottom: 1px solid var(--manzar-line); padding-block: 6px; }
+.manzar-nav .wp-block-navigation { gap: 8px 24px; font-weight: 700; }
+.wp-block-navigation a { display: inline-block; padding-block: 6px; }
+.wp-block-navigation .wp-block-navigation__responsive-container-open, .wp-block-navigation__responsive-container-close { min-width: 44px; min-height: 44px; }
+.wp-block-navigation__responsive-container.is-menu-open { padding: 28px; }
+.manzar-breaking { margin-block: 18px; border-block: 1px solid var(--manzar-line); gap: 16px; align-items: stretch; }
+.manzar-breaking-label { flex-shrink: 0; background: var(--manzar-red); color: #fff; padding: 8px 18px; margin: 0; display: flex; align-items: center; font-weight: 700; }
+.manzar-breaking .wp-block-query { flex: 1; margin: 0; align-self: center; padding: 10px 12px; }
+.manzar-breaking .wp-block-post-title { font-size: 1.05rem; margin: 0; line-height: 2.2; }
+.manzar-breaking .wp-block-post-template { margin: 0; }
+.manzar-below-nav-ad { min-height: 80px; }
+.manzar-section { margin-block: 36px; }
+.manzar-section > h2, .manzar-sidebar > h2, .manzar-article > h2 { border-bottom: 2px solid var(--manzar-line); padding-block: 4px 12px; position: relative; font-size: 1.65rem; }
+.manzar-section > h2::after, .manzar-sidebar > h2::after { content: ''; position: absolute; inset-block-end: -2px; inset-inline-start: 0; width: 64px; height: 3px; background: var(--manzar-red); }
+.manzar-featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: start; }
+.manzar-featured > * { margin: 0; }
+.manzar-news-grid .wp-block-post-template { gap: 26px; margin-block: 0; padding: 0; }
+.manzar-news-grid .wp-block-post { border-bottom: 1px solid var(--manzar-line); padding-bottom: 18px; }
+.manzar-news-grid .wp-block-post-featured-image { margin: 0 0 12px; background: var(--wp--preset--color--light); }
+.manzar-news-grid .wp-block-post-featured-image img { display: block; object-fit: cover; }
+.manzar-card-copy > * { margin-block: 4px; }
+.manzar-card-copy .wp-block-post-title { font-size: 1.35rem; line-height: 2.15; }
+.manzar-card-copy .wp-block-post-terms { font-size: .85rem; }
+.manzar-card-copy .wp-block-post-date { font-size: .8rem; }
+.manzar-card-copy .wp-block-post-excerpt { font-size: 1rem; line-height: 2.2; color: var(--wp--preset--color--muted); }
+.manzar-card-copy .wp-block-post-excerpt__more-link { color: var(--manzar-red); }
+.manzar-lead .wp-block-post-title { font-size: clamp(1.6rem, 2.4vw, 2.4rem); }
+.manzar-secondary .wp-block-post-excerpt { display: none; }
+.manzar-secondary .wp-block-post-title { font-size: 1.15rem; }
+.manzar-content-with-sidebar { display: grid; grid-template-columns: minmax(0, 290px) minmax(0, 1fr); gap: 36px; align-items: start; margin-block: 36px; }
+.manzar-content-with-sidebar > * { margin: 0; }
+/* In Urdu/RTL the first column is on the right. Preserve sensible LTR behavior too. */
+.manzar-sidebar { padding-inline-end: 24px; border-inline-end: 1px solid var(--manzar-line); }
+.manzar-sidebar .manzar-headlines .wp-block-post-featured-image, .manzar-headlines .wp-block-post-excerpt, .manzar-headlines .wp-block-post-terms { display: none; }
+.manzar-sidebar .manzar-headlines .wp-block-post-title { font-size: 1.1rem; }
+.manzar-sidebar .wp-block-post-template { gap: 12px; }
+.manzar-sidebar-ad { min-height: 250px; margin-block: 28px; }
+.manzar-article > .wp-block-post-title { font-size: clamp(2rem, 3.5vw, 3.2rem); margin-block: 14px; line-height: 2.15; }
+.manzar-byline { color: var(--wp--preset--color--muted); border-block: 1px solid var(--manzar-line); padding-block: 8px; font-size: .9rem; gap: 8px 24px; }
+.manzar-updated::before { content: 'آخری تازہ کاری: '; }
+.manzar-article .wp-block-post-content { font-size: 1.25rem; line-height: 2.5; }
+.wp-block-post-content p { margin-block: 1.4em; }
+.wp-block-post-content blockquote { border-inline-start: 3px solid var(--manzar-red); margin-inline: 0; padding-inline: 24px; }
+figcaption { color: var(--wp--preset--color--muted); font-size: .9rem; line-height: 2; }
+.manzar-share { border-block: 1px solid var(--manzar-line); padding-block: 14px; display: flex; flex-wrap: wrap; gap: 12px 20px; }
+.manzar-share a { text-decoration: underline; text-underline-offset: 4px; font-family: system-ui, sans-serif; font-size: .9rem; padding-block: 8px; }
+.manzar-post-navigation { border-bottom: 1px solid var(--manzar-line); padding-bottom: 20px; }
+.wp-block-query-pagination { margin-block: 30px; gap: 12px; }
+.wp-block-query-pagination a, .wp-block-query-pagination .current { display: inline-block; padding: 6px 16px; min-width: 44px; border: 1px solid var(--manzar-line); }
+.wp-block-query-pagination .current { color: #fff; background: var(--manzar-red); }
+.wp-block-query-no-results { background: var(--wp--preset--color--light); padding: 20px; color: var(--wp--preset--color--muted); }
+.manzar-archive, .manzar-page, .manzar-not-found { padding-block: 36px; min-height: 50vh; }
+.manzar-error-code { color: var(--manzar-red); font: 700 5rem/1 system-ui, sans-serif; }
+.manzar-footer { margin-top: 48px; border-top: 4px solid var(--manzar-red); padding-block: 30px 14px; }
+.manzar-footer-columns { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; margin-block: 32px; }
+.manzar-footer-columns > * { margin: 0; }
+.manzar-footer .wp-block-site-title { font-size: 2.5rem; }
+.manzar-footer h3 { font-size: 1.3rem; }
+.manzar-footer p { color: var(--wp--preset--color--muted); }
+.manzar-copyright { border-top: 1px solid var(--manzar-line); padding-block: 16px; font-size: .9rem; text-align: center; }
+@media (max-width: 1000px) {
+ .manzar-content-with-sidebar { grid-template-columns: minmax(0, 230px) minmax(0, 1fr); gap: 24px; }
+ .manzar-main-feed .wp-block-post-template.is-layout-grid, .manzar-related .wp-block-post-template.is-layout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .manzar-featured { grid-template-columns: 1fr 1fr; gap: 20px; }
+ .manzar-header-ad { flex-basis: 50%; }
+}
+@media (max-width: 760px) {
+ .manzar-masthead { justify-content: center; }
+ .manzar-header-ad { flex-basis: 100%; }
+ .manzar-featured, .manzar-content-with-sidebar { grid-template-columns: minmax(0, 1fr); }
+ .manzar-content-with-sidebar > :first-child { order: 2; }
+ .manzar-sidebar { border-inline-end: 0; padding-inline-end: 0; border-top: 2px solid var(--manzar-line); padding-top: 24px; }
+ .manzar-secondary .wp-block-post-template.is-layout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .manzar-footer-columns { grid-template-columns: 1fr; gap: 20px; }
+ .manzar-breaking { gap: 4px; }
+ .manzar-breaking-label { padding-inline: 10px; font-size: .9rem; }
+ .manzar-breaking .wp-block-post-title { font-size: .95rem; }
+ .manzar-archive .wp-block-post-template.is-layout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .manzar-article .wp-block-post-content { font-size: 1.15rem; }
+}
+@media (max-width: 430px) {
+ .manzar-news-grid:not(.manzar-secondary) .wp-block-post-template.is-layout-grid { grid-template-columns: minmax(0, 1fr); }
+ .manzar-topbar .wp-block-search { width: 100%; }
+ .manzar-secondary .wp-block-post-title { font-size: 1.05rem; }
+ .manzar-article > .wp-block-post-title { font-size: 1.9rem; }
+}
+@media print {
+ .manzar-sidebar, .manzar-ad, .manzar-nav, .manzar-topbar, .manzar-share, .manzar-footer { display: none; }
+ .manzar-content-with-sidebar { display: block; }
+}

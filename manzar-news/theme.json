@@ -1,0 +1,220 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "820px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "red",
+          "name": "Newspaper red",
+          "color": "#B91C1C"
+        },
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#171717"
+        },
+        {
+          "slug": "muted",
+          "name": "Secondary text",
+          "color": "#606060"
+        },
+        {
+          "slug": "paper",
+          "name": "Paper",
+          "color": "#FFFFFF"
+        },
+        {
+          "slug": "light",
+          "name": "Light section",
+          "color": "#F6F6F6"
+        },
+        {
+          "slug": "line",
+          "name": "Borders",
+          "color": "#E5E5E5"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "size": "0.75rem",
+          "name": "Small"
+        },
+        {
+          "slug": "40",
+          "size": "1.5rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "60",
+          "size": "3rem",
+          "name": "Large"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "name": "Urdu newspaper",
+          "slug": "urdu",
+          "fontFamily": "\"Jameel Noori Nastaleeq\", \"Noto Nastaliq Urdu\", \"Urdu Typesetting\", serif"
+        },
+        {
+          "name": "System sans",
+          "slug": "system",
+          "fontFamily": "system-ui, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.95rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Medium",
+          "size": "1.15rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.65rem"
+        },
+        {
+          "slug": "x-large",
+          "name": "X-Large",
+          "size": "2.3rem"
+        },
+        {
+          "slug": "xx-large",
+          "name": "Xx-Large",
+          "size": "3.4rem"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "spacing": {
+      "blockGap": "1.5rem",
+      "padding": {
+        "left": "clamp(16px, 3vw, 40px)",
+        "right": "clamp(16px, 3vw, 40px)"
+      }
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|urdu",
+      "fontSize": "var:preset|font-size|medium",
+      "lineHeight": "2.25"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "inherit"
+        },
+        "typography": {
+          "textDecoration": "none"
+        },
+        ":hover": {
+          "color": {
+            "text": "var:preset|color|red"
+          }
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontWeight": "700",
+          "lineHeight": "2.1"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|red",
+          "text": "var:preset|color|paper"
+        },
+        "border": {
+          "radius": "0"
+        },
+        "typography": {
+          "fontFamily": "inherit",
+          "lineHeight": "2"
+        }
+      }
+    },
+    "blocks": {
+      "core/site-title": {
+        "typography": {
+          "fontSize": "var:preset|font-size|xx-large",
+          "lineHeight": "2.1"
+        },
+        "color": {
+          "text": "var:preset|color|red"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontSize": "var:preset|font-size|large"
+        }
+      },
+      "core/post-date": {
+        "color": {
+          "text": "var:preset|color|muted"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|small"
+        }
+      },
+      "core/post-terms": {
+        "color": {
+          "text": "var:preset|color|red"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|small"
+        }
+      },
+      "core/query-title": {
+        "typography": {
+          "fontSize": "var:preset|font-size|x-large"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Newspaper header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Newspaper footer",
+      "area": "footer"
+    },
+    {
+      "name": "sidebar",
+      "title": "News sidebar",
+      "area": "uncategorized"
+    }
+  ]
+}
